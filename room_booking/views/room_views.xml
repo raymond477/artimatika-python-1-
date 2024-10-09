@@ -1,0 +1,48 @@
+<odoo>
+    <record id="view_master_ruangan_tree" model="ir.ui.view">
+        <field name="name">master.ruangan.tree</field>
+        <field name="model">master.ruangan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nama_ruangan"/>
+                <field name="tipe_ruangan"/>
+                <field name="lokasi_ruangan"/>
+                <field name="kapasitas"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="view_pemesanan_ruangan_tree" model="ir.ui.view">
+        <field name="name">pemesanan.ruangan.tree</field>
+        <field name="model">pemesanan.ruangan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nomor_pemesanan"/>
+                <field name="ruangan_id"/>
+                <field name="tanggal_pemesanan"/>
+                <field name="status_pemesanan"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id="view_pemesanan_ruangan_form" model="ir.ui.view">
+        <field name="name">pemesanan.ruangan.form</field>
+        <field name="model">pemesanan.ruangan</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="nomor_pemesanan"/>
+                    <field name="ruangan_id"/>
+                    <field name="nama_pemesan"/>
+                    <field name="tanggal_pemesanan"/>
+                    <field name="status_pemesanan"/>
+                    <field name="catatan_pemesanan"/>
+                </group>
+                <footer>
+                    <button string="Proses" type="object" name="proses_pemesanan" class="btn-primary"/>
+                    <button string="Selesai" type="object" name="selesai_pemesanan" class="btn-success"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
